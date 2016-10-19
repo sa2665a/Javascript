@@ -1,0 +1,89 @@
+
+var user = {};
+var responses = [];
+
+function clientName(){
+	var name = prompt("What is your name ?");
+	user.name = name;
+}
+
+function question(){
+	var answer1 = prompt("Is Real Madrid better than Barcelona?");
+
+	if(answer1.toLowerCase() == 'yes'){
+		answer1 = false;
+	}else if(answer1.toLowerCase() == 'no'){
+		answer1 = true;
+	}else{
+		alert("just answer 'Yes' or 'No'");
+		return question();
+	}
+
+	responses.push(answer1);
+}
+
+function question2(){
+	var answer2 = prompt("Who's from Argentina, Ronaldinho, Ronaldo, Cruyff or Messi?");
+	answer2=answer2.toLowerCase();
+
+	switch(answer2){
+		case 'Ronaldinho':
+		case 'Cruyff':
+		case 'Ronaldo': 
+			answer2 = false;
+			break;
+		case 'Messi':
+			answer2 = true;
+			break;
+		default:
+			alert("Choose just one of the following options!");
+			return question2();
+			break;
+	}
+
+	responses.push(answer2);
+}
+
+function question3(){
+	var answer3 = prompt("Is Cristiano Ronaldo from Portugal? True or False?");
+
+	if(answer3.toLowerCase() == 'true'){
+		answer3 = true;
+	}else if(answer3.toLowerCase() == 'false'){
+		answer3 = false;
+	}else{
+		alert("Please! Just answer 'True' or 'False'");
+		return question3();
+	}
+
+	responses.push(answer3);
+}
+
+function question4(){
+	var answer4 = prompt("Who is a soccer player? Maradona, Michael Jackson, Madona, Obama?");
+	answer4 = answer4.toLowerCase();
+
+	switch(answer4){
+		case 'Obama':
+		case 'Madona':
+		case 'Michael Jackson': 
+			answer4 = false;
+			break;
+		case 'Maradona':
+			answer4 = true;
+			break;
+		default:
+			alert("Choose just one of the following options!");
+			return question4();
+			break;
+	}
+
+	responses.push(answer4);
+
+}
+
+clientName();
+question();
+question2();
+question3();
+question4();
