@@ -1,4 +1,5 @@
 
+
 var user = {};
 var responses = [];
 
@@ -27,12 +28,12 @@ function question2(){
 	answer2=answer2.toLowerCase();
 
 	switch(answer2){
-		case 'Ronaldinho':
-		case 'Cruyff':
-		case 'Ronaldo': 
+		case 'ronaldinho':
+		case 'cruyff':
+		case 'ronaldo': 
 			answer2 = false;
 			break;
-		case 'Messi':
+		case 'messi':
 			answer2 = true;
 			break;
 		default:
@@ -64,12 +65,12 @@ function question4(){
 	answer4 = answer4.toLowerCase();
 
 	switch(answer4){
-		case 'Obama':
-		case 'Madona':
-		case 'Michael Jackson': 
+		case 'obama':
+		case 'madona':
+		case 'michael jackson': 
 			answer4 = false;
 			break;
-		case 'Maradona':
+		case 'maradona':
 			answer4 = true;
 			break;
 		default:
@@ -82,8 +83,11 @@ function question4(){
 
 }
 
+
 clientName();
 question();
 question2();
 question3();
 question4();
+
+
